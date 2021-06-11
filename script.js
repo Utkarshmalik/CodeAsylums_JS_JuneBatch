@@ -1,81 +1,120 @@
 
-//strings and the arrays in JS
 
 
-//strings in jS are immutable
+// function  add() {
 
-let name='Utkarsh';
+//     let sum=0;
 
-//let greeting = "Hello name"
+//     for(let i=0;i<arguments.length;i++)
+//     {
+//         sum+=arguments[i];
+//     }
 
+//     return sum;
+// }
 
-//template strings 
-// let greeting=`hello ${name}`;
-//console.log(greeting);
-
-// //length 
-// console.log(greeting.length);
-
-
-// console.log(greeting[12]);
-
-
-//concatenate 
-
-// let fullName=name+" malik";
-
-// console.log(fullName);
+// console.log(add(1));
+// console.log(add(1,2));
+// console.log(add(1,2,3));
+// console.log(add(1,2,3));
+// console.log(add(1,2,3,4));
+// console.log(add(1,2,4,5,6));
 
 
-// let allow=false;
-
-// // //toString 
-
-// console.log(allow.toString());
+//Functions in JS are first class citizens
 
 
-// // console.log(typeof name);
+// let sum=function(a,b){
 
-// let str=new String("some js string");
-// console.log(str.length);
+//     console.log(a+b);
+// }
+
+// let add=sum;
+
+// add(3,4);
 
 
 
-//concat 
+// function sum(a,b){
 
-// let greeting=name.concat('hello');
-// console.log(greeting);
-
-
-// //split
-// let str="Hello world how are you";
-// let substrings=str.split(' ');
-
-// console.log(substrings);
+//     return a+b;
+// }
 
 
+// function average(a,b,sum)
+// {
+//     return sum(a,b)/2;
+// }
 
-//indexOf()
+// let add=sum;
 
-
-// let str="Hello world how are how you";
-
-// let index=str.lastIndexOf('how');
-
-// console.log(index);
-
-// //substring
+// console.log(average(10,30,add));
 
 
-// let str="Hello world how are how you";
-
-// let substring=str.substring(undefined);
-
-// console.log(substring);
+// //average of two number : sum/2
 
 
-//slice 
 
-let email="utkarsh@gmail.com";
-console.log(email.slice(-5));
+// function outer()
+// {
+//     let x=10;
+
+//     return function inner()
+//     {
+//         let y=20;
+
+//         return x+y;
+//     }
+// }
+
+// let y=outer();
+// console.log(y());
+
+
+
+//anonymous functions
+
+// let fun=function() {
+//     console.log("fun");
+// }
+
+// setTimeout(function() {
+//     console.log("hello")  
+// },3000);
+
+
+//IIFE : immidiately invoked function exectuion
+
+(function (){
+    console.log("IIFE");
+})();
+
+
+//ES6 : arrow functions
+
+
+let fun=()=>
+{
+    console.log("hello");
+}
+fun();
+
+let add=(a,b)=>
+{
+    return a+b;
+}
+
+
+console.log(add(2,3));
+
+
+
+// //callback functions
+
+// setTimeout(() => {
+//    console.log("rfeefe"); 
+// }, 4000);
+
+
+
 
