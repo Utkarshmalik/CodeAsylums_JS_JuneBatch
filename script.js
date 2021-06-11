@@ -1,225 +1,81 @@
 
+//strings and the arrays in JS
 
-// // //Javascript is case Se
-// // //dynamic or static : dynamic
 
+//strings in jS are immutable
 
+let name='Utkarsh';
 
+//let greeting = "Hello name"
 
 
+//template strings 
+// let greeting=`hello ${name}`;
+//console.log(greeting);
 
-// // //numbers,string,boolean,null,undefind,symbol, object 
+// //length 
+// console.log(greeting.length);
 
 
+// console.log(greeting[12]);
 
-// // var counter=10;      //number 
-// // console.log(typeof counter);
 
+//concatenate 
 
+// let fullName=name+" malik";
 
+// console.log(fullName);
 
-// // var myName;
-// // console.log(typeof myName);
 
+// let allow=false;
 
-// // //null
-// // let someSentence=null;
-// // console.log(typeof someSentence);
+// // //toString 
 
+// console.log(allow.toString());
 
-// // let someObj={} 
 
-// // let person={firstName:'Utkarsh',age:25};
+// // console.log(typeof name);
 
-// // let a=10;
-// // let b="10";
+// let str=new String("some js string");
+// console.log(str.length);
 
-// // // == and ===
-// // // console.log(a==b);
-// // // console.log(a===b)
 
-// // //falsy values  : 0 , "", null , undefined , [] 
-// // //truth values   
 
-// // console.log(null===undefined);
+//concat 
 
-// // // var,let and const
+// let greeting=name.concat('hello');
+// console.log(greeting);
 
 
-// // let a=10;
-// // let b=a;
+// //split
+// let str="Hello world how are you";
+// let substrings=str.split(' ');
 
-// // b++;
-// // console.log(a);
-// // console.log(b);
+// console.log(substrings);
 
-// // let a="hello";
-// // let b=a;
 
-// // b+=" world";
 
-// // console.log(a);
-// // console.log(b);
+//indexOf()
 
-// let person1={
-//     name:"Utkarsh",
-//     age:25
-// }
 
-// let person2=person1;
+// let str="Hello world how are how you";
 
-// person2.age++;
+// let index=str.lastIndexOf('how');
 
-// console.log(person1.age);
-// console.log(person2.age);
+// console.log(index);
 
+// //substring
 
-// let x=5;
 
-// if(x>7)
-// {
-//     console.log('x is greater than 7');
-// }
-// else
-// {
-    
-//     console.log('x is less than or equal 7');
-// }
+// let str="Hello world how are how you";
 
+// let substring=str.substring(undefined);
 
+// console.log(substring);
 
-// if(x>7)
-// {
-//     console.log('x is greater than 7');
-// }
 
-// else if(x<7)
-// {
+//slice 
 
-// }
-// else
-// {
-    
-//     console.log('x is less than or equal 7');
-// }
+let email="utkarsh@gmail.com";
+console.log(email.slice(-5));
 
-
-
-//ternary operator 
-
-
-// var allow;
-// var age=24;
-
-// if(age>18)
-// {
-//     allow=true;
-// }
-// else
-// {
-//     allow=false;
-// }
-
-//var vairble= conditon ? exp1 : exp2
-
-
-// var allow= (age>18)?true:((height>180)?true:false);
-
-
-
-
-//switch case statement 
-
-
-// var day=9 ;
-
-// var dayName;
-
-
-// switch(day)
-// {
-//     case 1:
-//         dayName='Sunday';
-//         break;
-    
-//     case 2:
-//         dayName='Monday';
-//         break;
-    
-//     case 3:
-//         dayName='Tuesday';
-//         break;
-    
-//         default:
-//         dayName='Invalid';
-// }
-
-// console.log(dayName);
-
-
-
-// let count=1;
-
-// while(count < 10)
-// {
-//     console.log(count);
-//     count+=2;
-// }
-
-
-// let count=0;
-// do
-// {
-//     count++;
-//     console.log(count);
-// }while(count < 10)
-
-
-
-// for(var i=1;i<5;i++)
-// {
-//     console.log(i);
-// }
-
-
-// for(var i=1;i<10;i++)
-// {
-//     if(i%3==0)
-//     {
-//         continue;
-//     }
-
-//     console.log(i);
-// }
-
-
-
-// console.log(i);
-
-
-
-// console.log(undefined==null);
-// console.log(!undefined === !null);
-
-// console.log(!null);
-// console.log(null==false);
-// console.log(null===false);
-//  console.log(null==true)
-
-
-
-//null value 0 : maths operations
-console.log(null+5);
-console.log(null-5);
-console.log(null/5);
-console.log(null%5);
-
-
-
-
-console.log(null==false);
-console.log(undefined==false);
-
-
-
-console.log(!null === !undefined);
