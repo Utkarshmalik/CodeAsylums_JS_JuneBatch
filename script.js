@@ -1,62 +1,69 @@
+// let car = {
+//     brand: 'Honda',
+//     getBrand: function () {
+//         return this.brand;
+//     }
+// }
+
+// console.log(car.getBrand());
 
 
+// let brand=car.getBrand;
 
-const arr=new Array(1,2,3);
-
-console.log(typeof Array);
-
-console.log(typeof Object);
+// brand();
 
 
-//Array , Object
+//function methods :call , apply and bind 
 
 
-
-
-function Person(firstName,lastName){
-    this.firstName=firstName;
-    this.lastName=lastName;
-
+let person1={
+    name:"Utkarsh",
+    money:100,
+    depositMoney(x)
+    {
+        console.log(`${this.name} is depositing ${x} money in bank`);
+    }
 }
 
+let person2={
+    name:"Rahul",
+    money:1000
+}
+
+person2.depositMoney=person1.depositMoney.bind(person2);
+
+person2.depositMoney(60);
 
 
-Person.prototype.sayHi=function()
+// const RahulsDepositMoneyFunction=person1.depositMoney.bind(person2);
+// person2.depositMoney=RahulsDepositMoneyFunction;
+
+// person2.depositMoney(10);
+
+
+
+function sayHi(greeting,Question)
 {
-    console.log(`${this.firstName} is saying hii`)
+    console.log(`${this.name} is saying ${greeting} and asking ${Question}`);
 }
 
+//i want to explicitly tell the method what should be the value of "this" in that method
 
-const person1=new Person("Utkarsh",'de');
-const person2=new Person("Rahul",'jain');
+//call
 
-
-//[[prototype]]://__proto__
-
-// console.log(person1.__proto__===Person.prototype);
-// console.log(Person.prototype.__proto__===Object.prototype);
-// console.log(Object.prototype.__proto__);
+// sayHi("hello","how are you ?");
+// sayHi.call(person1,"hello","how are you ?");
+// sayHi.call(person2,"hello","how are you ?");
 
 
-const arr1=new Array(1,2,4);
-
-console.log(arr1.toString());
-
-
-// //Array.prototype
-
-// console.log(arr1.__proto__===Array.prototype);
-
-// console.log(Array.prototype.__proto__===Object.prototype); 
-
-// console.log(arr1.__proto__.__proto__.__proto__);
+//apply
+sayHi.apply(person2,["hello","how are you ?"]);
 
 
-// // Everything is JS is an object 
+//bind
 
-
-// const s1=new String("hello");
-// console.log(s1.__proto__.__proto__);
+const newFun=sayHi.bind(person1,"hello","how are you ?");
+newFun();
 
 
 
