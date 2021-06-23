@@ -1,87 +1,72 @@
+// // //set timeout 
+
+// // // console.log("hi-1");
+
+// // // setTimeout(() => {
+// // //     console.log("hi-2");
+// // // }, 2000);
+
+// // // console.log("hi-3");
+
+// // //1,3,2 
 
 
 
+// // // console.log("hi-1");
+
+// // // setTimeout(() => {
+// // //     console.log("hi-2");
+// // // }, 2000);
+
+// // // setTimeout(() => {
+// // //     console.log("hi-3");
+// // // }, 0);
+
+// // // console.log("hi-4")
+
+
+// // //event loop architecure 
+
+// // //1,3,4,2
+// // //1,4,3,2 ->
+// // //3,1,4,2
+
+
+// // //javascript runtime : heap,call stack 
+
+
+// // for(let i=0;i<5;i++)
+// // {
+// //     setTimeout(() => {
+// //         console.log(i);
+// //     }, i*1000);
+// // }
+
+
+// //var vs let
+
+// //var is always function scoped 
+// //let is always blocked scope 
 
 
 
-//call to fetch the data from a third party
-
-
-
-// //APi call using fetch in JS
-
-
-//Side effect
-// fetch("https://jsonplaceholder.typicode.com/users");
-
-//to handle synchrouns tasks in JS -> callbacks , promises , asycn await 
-
-//purpose is to help writing synchrounous piece of code in JS
-
-// //side effect
-// setTimeout(() => {
-//     console.log("hello");
-// }, 4000);
-
-// console.log("Hii");
-
-
-
-
-
-// //fetch(url) => Promise
-
-
-// //promise
-
-
-
-
-// let someWork=new Promise((resolve,reject)=>
+// function A()
 // {
+//     var age=25;
+// }
 
-//     //here i will perform the side effect 
-
-//     setTimeout(() => {
-    
-//         let success=true;
-
-//         if(success)
-//         resolve("data");
-//         else
-//         reject("some eror");
-
-//     }, 4000);
-
-    
-// // })
-
-// someWork.then((value)=>
-// {
-//     console.log(value);
-// })
-// .catch((err)=>
-// {
-//     console.log(err);
-// })
-// .finally(()=>
-// {
-//     console.log("promised settled");
-// })
-
-// //promise chanining 
+// console.log(age);
 
 
-fetch("https://jsonplaceholder.typicode.com/users")
-.then((reponse)=>
-{
-     return reponse.json();
-})
-.then((users)=>
-{
-    console.log(users);
-})
-.catch((err)=>
-{
-    console.log(err);
-})
+
+function greeting() {
+    let message = 'Hi';
+
+    function sayHi() {
+        console.log(message);
+    }
+
+    return sayHi;
+}
+let hi = greeting();
+ hi();
