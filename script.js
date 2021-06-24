@@ -1,20 +1,46 @@
 
 
+// const root=document.getElementById('root');
 
-// const rootElement=document.getElementById('root');
+// //h1
 
-// console.log(rootElement);
+// //createElement
+// const newHeading=document.createElement('h1');
 
-const items=document.getElementById('menu');
-
-const firstItem=items.firstElementChild;
-const lastItem=items.lastElementChild;
-
-const parent=lastItem.parentElement;
+// //textNode to a head 
+// newHeading.textContent="i am a new heading";
 
 
 
-const secondItem=firstItem.nextElementSibling;
-const secondLastItem=lastItem.previousElementSibling;
+// //innerHTML
+// root.appendChild(newHeading)
 
-console.log(secondLastItem);
+const todoList=['sleep','dance','code','drink','sing'];
+
+
+ const root=document.getElementById('root');
+
+ //ul TYPE
+ const list=document.createElement('ul');
+
+ list.setAttribute("id","list");
+
+ todoList.forEach((item)=>
+ {
+     const newItem=document.createElement('li');
+     newItem.textContent=item;
+     newItem.setAttribute("class","item");
+     list.appendChild(newItem);
+
+    //  newItem.style.color='red';
+    //  newItem.style.backgroundColor='blue';
+    //  newItem.style.fontSize='30px';
+
+    newItem.setAttribute("style",'color:yellow;background-color:blue;font-size:30px')
+
+ })
+
+ root.appendChild(list);
+
+
+
